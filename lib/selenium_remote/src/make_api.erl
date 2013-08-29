@@ -149,6 +149,7 @@ full_session_forms (Functions) ->
     AllFunctions = Functions ++ Stop,
     [{attribute, Line, file, {"./selenium_session.erl", 1}},
      {attribute, Line, module, {selenium_session, ['Session']}},
+     {attribute, Line, compile, {parse_transform,pmod_pt}},
      generate_export_all(Line, AllFunctions)]
     ++ AllFunctions.
 
